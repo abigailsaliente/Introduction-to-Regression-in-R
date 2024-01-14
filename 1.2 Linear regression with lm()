@@ -1,0 +1,16 @@
+# Run a linear regression of price_twd_msq vs. n_convenience
+lm(formula = price_twd_msq ~ n_convenience  , data= taiwan_real_estate)
+
+Call:
+lm(formula = price_twd_msq ~ n_convenience, data = taiwan_real_estate)
+
+Coefficients:
+  (Intercept)  n_convenience  
+       8.2242         0.7981  
+
+# The model had an (Intercept) coefficient of 8.2242. What does this mean?
+# On average, a house with zero convenience stores nearby had a price of 8.2242 TWD per square meter.
+
+# The model had an n_convenience coefficient of 0.7981. What does this mean?
+# If you increase the number of nearby convenience stores by one, then the expected increase in house price is 0.7981 TWD per square meter.
+
