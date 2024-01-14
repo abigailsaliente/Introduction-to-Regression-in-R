@@ -1,0 +1,16 @@
+summary_stats <- taiwan_real_estate %>% 
+  # Group by house age
+  group_by(house_age_years)%>% 
+  # Summarize to calculate the mean house price/area
+  summarize(mean_by_group = mean(price_twd_msq))
+
+# See the result
+summary_stats
+
+
+# A tibble: 3 × 2
+  house_age_years mean_by_group
+  <ord>                   <dbl>
+1 0 to 15                 12.6 
+2 15 to 30                 9.88
+3 30 to 45                11.4 
