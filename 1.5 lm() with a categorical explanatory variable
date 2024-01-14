@@ -1,0 +1,33 @@
+# Run a linear regression of price_twd_msq vs. house_age_years
+mdl_price_vs_age <- lm(formula= price_twd_msq ~ house_age_years, data= taiwan_real_estate)
+
+# See the result
+mdl_price_vs_age
+
+
+Call:
+lm(formula = price_twd_msq ~ house_age_years, data = taiwan_real_estate)
+
+Coefficients:
+      (Intercept)  house_age_years.L  house_age_years.Q  
+          11.3025            -0.8798             1.7462  
+
+
+
+
+# Update the model formula to remove the intercept
+mdl_price_vs_age_no_intercept <- lm(
+  price_twd_msq ~ house_age_years + 0, 
+  data = taiwan_real_estate
+)
+
+# See the result
+mdl_price_vs_age_no_intercept
+
+Call:
+lm(formula = price_twd_msq ~ house_age_years + 0, data = taiwan_real_estate)
+
+Coefficients:
+ house_age_years0 to 15  house_age_years15 to 30  house_age_years30 to 45  
+                 12.637                    9.877                   11.393  
+>
