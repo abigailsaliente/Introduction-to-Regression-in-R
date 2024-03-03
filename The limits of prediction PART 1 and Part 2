@@ -1,0 +1,2 @@
+minus_one <- tibble(n_convenience = -1)
+two_pt_five <- tibble(n_convenience = 2.5)
